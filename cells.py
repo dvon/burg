@@ -8,8 +8,8 @@ import sys
 from crop import *
 
 T = 200  # Threshold value for pre-HoughLines processing.
-X = 1475  # HoughLines score needed for a vertical line.
-Y = 1875  # HoughLines score needed for a horizontal line.
+V = 1475  # HoughLines score needed for a vertical line.
+H = 1875  # HoughLines score needed for a horizontal line.
 E = 0.01  # How close to vertical / horizontal must lines be?
 F = 5  # How far apart must lines be?
 
@@ -33,7 +33,7 @@ def lines(cropped):
     cv2.morphologyEx(scharr_x, cv2.MORPH_CLOSE, k, dst=scharr_x)
     thresh = cv2.threshold(scharr_x, T, 255, cv2.THRESH_BINARY)[1]
 
-    lines = cv2.HoughLines(thresh, 1, np.pi / 180, X)
+    lines = cv2.HoughLines(thresh, 1, np.pi / 180, V)
     xs = []
 
     for line in lines:
@@ -51,7 +51,7 @@ def lines(cropped):
     cv2.morphologyEx(scharr_y, cv2.MORPH_CLOSE, k, dst=scharr_y)
     thresh = cv2.threshold(scharr_y, T, 255, cv2.THRESH_BINARY)[1]
 
-    lines = cv2.HoughLines(thresh, 1, np.pi / 180, Y)
+    lines = cv2.HoughLines(thresh, 1, np.pi / 180, H)
     ys = []
 
     for line in lines:
