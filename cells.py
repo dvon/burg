@@ -212,7 +212,7 @@ def draw_cells(cropped, cells):
     c = 0
     b = 5
 
-    for column in cells:
+    for column in cells[1:-1]:
         for cell in column[2:-1]:
             x0, y0 = cell[0]
             x1, y1 = cell[1]
@@ -225,9 +225,8 @@ def draw_cells(cropped, cells):
 
 if __name__ == '__main__':
     a = sys.argv[1]
-    original = cv2.imread(a)
-    copy = np.copy(original)
     n = a[:a.find('.')]
+    original = cv2.imread(a)
     cropped = crop(original, m=30, f=6, fast=True)
     # draw_lines(cropped, *lines(cropped))
     # cv2.imwrite(n + '_lines.jpg', original)
