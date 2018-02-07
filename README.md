@@ -1,3 +1,29 @@
+## Background
+
+The goal of this project is to significantly speed up data collection
+from scanned images of handwritten census forms.
+OCR software works well for printed text, but the cursive
+handwriting in these forms presents a much
+more challenging problem. Our goal is not to fully
+automate the data collection process, but to guide a human user in
+a way that makes their work more efficient.
+
+Rather than attempting
+to develop better OCR software, with the goal of automatically
+recognizing letters within the handwritten text, we will use
+existing image processing / computer vision techniques designed to
+group together similar images. Our software would not recognize,
+for example, that the images in one group represented the
+handwritten word “yes” and in another group the word “no.” The
+software would simply categorize images into groups and present
+representative images from each group to a human user, who would
+interpret the images’ meaning, which could be automatically applied
+to the other images from the group.
+
+## So Far...
+
+The example images, with explanations for where they come from,
+are meant to show what's been accompished so far.
 
 ### example.jpg
 
