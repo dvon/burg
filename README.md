@@ -73,7 +73,7 @@ by similarity.  It uses a simple template matching scheme
 (`cv2.matchTemplate` again), with very little preprocessing.
 Whether two cells are considered similar enough to group together
 is just based on a threshold value for how good a match could
-be found between two cells.  The image just shows (highlighted
+be found between the two cells.  The image shows (highlighted
 with colored rectangles) cells that supposedly match the first
 cell in each column.  (This was produced by an earlier version of
 compare.py.)
