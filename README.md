@@ -1,7 +1,8 @@
 ## Background
 
 The goal of this project is to significantly speed up data collection
-from scanned images of handwritten census forms.
+from scanned images of handwritten census forms (from approximately
+100 years ago).
 OCR software works well for printed text, but the cursive
 handwriting in these forms presents a much
 more challenging problem. Our goal is not to fully
