@@ -11,7 +11,7 @@ a way that makes their work more efficient.
 
 Rather than attempting
 to develop better OCR software, with the goal of automatically
-recognizing letters within the handwritten text, we will use
+recognizing letters within the handwritten text, we intend to use
 existing image processing / computer vision techniques designed to
 group together similar images. Our software would not recognize,
 for example, that the images in one group represented the
