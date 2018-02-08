@@ -123,3 +123,11 @@ Within in a column, there's a different highlight color for
 each of the first 8 groups found.  In the "RELATION" column, for
 example, cells grouped with the first cell are tan, cells grouped
 with the second and third are blue, with the fourth are red, etc.
+
+### example\_compare\_t\_closest.jpg
+
+This image represents a third attempt to group cells, very much
+like the second attempt except that, instead of considering just
+the closest match for each cell, it considers the top T closest
+matches.  Also, cells whose average color is very close to white
+are assumed to be blank and ignored.
