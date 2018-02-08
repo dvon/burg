@@ -24,7 +24,8 @@ to the other images from the group.
 ## So Far...
 
 The example images, with explanations for where they come from,
-are meant to show what's been accompished so far.
+are meant to show what's been accompished so far.  The current
+version is written in Python 3 and uses OpenCV 3.
 
 ### example.jpg
 
@@ -51,7 +52,7 @@ to the table and a small margin around the outside.
 
 ### example\_lines.jpg
 
-`lines` function, in cells.py, used to find the horizontal and
+`lines` function, in cells.py, is used to find the horizontal and
 vertical boundary lines in the table.  `filter_lines` removes
 redundant lines, found one pixel apart, that represent wider
 boundary lines in the table.  `draw_lines` is used to produce
@@ -68,19 +69,22 @@ lines we expect to find in the table.
 
 ### example\_cells.jpg
 
-Once the table boundary lines have been found, `cells` function
+Once the table boundary lines have been found, the `cells` function
 (in cells.py), determines the coordinates of corners for cells
 defined by those boundaries.  `adjust_borders` uses
 `cv2.matchTemplate` to search cell images for horizontal and
-vertical lines along the outside edges, and adjusts corner
-coordinates based on what it finds.  (This wouldn't be necessary
+vertical border lines (maybe template matching isn't the best way
+to do this?) along the outside edges, and adjusts corner
+coordinates based on what it finds.  This wouldn't be necessary
 if the lines in the table were perfectly straight and evenly
 spread out, but they are far enough off in some places that this
-extra step helps.)
+extra step helps.
 
 The `erase_borders` function works in a way very similar to
 `adjust_borders`, except that it colors the border lines white.
-It then processes the portion of the cell image where borders
+It then processes (using close transformations with a horizontally
+oriented kernel and then a vertically oriented kernel) the portion
+of the cell image where borders
 were erased in a way that "spreads" the erasing a little bit
 further out, to catch missed border bits, and also fills in a
 little bit of darker color where handwriting lines crossed the
@@ -113,7 +117,7 @@ used to get a similarity score, but instead of grouping together
 all matches above a threshold, a graph is created linking per-cell
 nodes to their best match.  Connected components within the graph
 are considered similar enough to group together.  (This image
-was produced by the current version of compare.py)
+was produced by the current version of compare.py.)
 
 Within in a column, there's a different highlight color for
 each of the first 8 groups found.  In the "RELATION" column, for
