@@ -5,7 +5,7 @@ from scanned images of handwritten census forms (from approximately
 100 years ago).
 OCR software works well for printed text, but the cursive
 handwriting in these forms presents a much
-more challenging problem. Our goal is not to fully
+more challenging problem. Our intent is not to fully
 automate the data collection process, but to guide a human user in
 a way that makes their work more efficient.
 
