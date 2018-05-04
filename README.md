@@ -33,11 +33,11 @@ The original scanned census form.
 
 [example\_corners.jpg](example\_corners.jpg)
 
-With corners of the main table marked.  Uses `fast_corners`
-function in crop.py.  Original `corners` function searches top
-left, top right, bottom right, and then bottom left portions of
-the original image for corners; `fast_corners` version scales
-the image down and searches the scaled down version.  Both
+The census form, with corners of the main table marked.  Uses
+`fast_corners` function in crop.py.  Original `corners` function
+searches top left, top right, bottom right, and then bottom left
+portions of the original image for corners; `fast_corners` version
+scales the image down and searches the scaled down version.  Both
 functions rely on `cv2.matchTemplate` to find the corners.
 
 [example\_cropped.jpg](example\_cropped.jpg)
