@@ -50,7 +50,7 @@ transform.  Then the `crop` function is used to get a view
 (i.e., a numpy view, rather than a copy) of the image data limited
 to the table and a small margin around the outside.
 
-### example\_lines.jpg
+[example\_lines.jpg](example\_lines.jpg)
 
 `lines` function, in cells.py, is used to find the horizontal and
 vertical boundary lines in the table.  `filter_lines` removes
@@ -67,7 +67,7 @@ eventually be necessary to build something to
 automatically adjust these parameters based on the number of
 lines we expect to find in the table.
 
-### example\_cells.jpg
+[example\_cells.jpg](example\_cells.jpg)
 
 Once the table boundary lines have been found, the `cells` function
 (in cells.py), determines the coordinates of corners for cells
@@ -97,7 +97,7 @@ borders erased and with cells highlighted by colored rectangles.
 border erasing functions, particularly as line detection parameters
 are modified and it's important to see the effect.)
 
-### example\_compare.jpg
+[example\_compare.jpg](example\_compare.jpg)
 
 This image represents a first attempt to group cells in a column
 by similarity.  It uses a simple template matching scheme
@@ -109,7 +109,7 @@ with colored rectangles) cells that supposedly match the first
 cell in each column.  (This was produced by an earlier version of
 compare.py.)
 
-### example\_compare\_closest.jpg
+[example\_compare\_closest.jpg](example\_compare\_closest.jpg)
 
 This image represents a second attempt to group cells by similarity,
 more conservative than the first attempt.  Template matching is
@@ -124,7 +124,7 @@ each of the first 8 groups found.  In the "RELATION" column, for
 example, cells grouped with the first cell are tan, cells grouped
 with the second and third are blue, with the fourth are red, etc.
 
-### example\_compare\_t\_closest.jpg
+[example\_compare\_t\_closest.jpg](example\_compare\t\_closest.jpg)
 
 This image represents a third attempt to group cells, very much
 like the second attempt except that, instead of considering just
