@@ -124,7 +124,7 @@ each of the first 8 groups found.  In the "RELATION" column, for
 example, cells grouped with the first cell are tan, cells grouped
 with the second and third are blue, with the fourth are red, etc.
 
-[example\_compare\_t\_closest.jpg](example\_compare\t\_closest.jpg)
+[example\_compare\_t\_closest.jpg](example\_compare\_t\_closest.jpg)
 
 This image represents a third attempt to group cells, very much
 like the second attempt except that, instead of considering just
