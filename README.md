@@ -27,11 +27,11 @@ The example images, with explanations for where they come from,
 are meant to show what's been accompished so far.  The current
 version is written in Python 3 and uses OpenCV 3.
 
-### example.jpg
+[example.jpg](example.jpg)
 
 The original scanned census form.
 
-### example\_corners.jpg
+[example\_corners.jpg](example\_corners.jpg)
 
 With corners of the main table marked.  Uses `fast_corners`
 function in crop.py.  Original `corners` function searches top
@@ -40,7 +40,7 @@ the original image for corners; `fast_corners` version scales
 the image down and searches the scaled down version.  Both
 functions rely on `cv2.matchTemplate` to find the corners.
 
-### example\_cropped.jpg
+[example\_cropped.jpg](example\_cropped.jpg)
 
 After corners are found, `deskew` function (in crop.py) uses
 `cv2.findHomography` to get the transform needed to make the
